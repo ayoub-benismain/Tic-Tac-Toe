@@ -1,0 +1,221 @@
+:root {
+  --darkColor : #131212;
+  --secondColor : rgb(7, 25, 187) ;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--darkColor);
+
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.leftSide {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.boardTitle {
+  font-size: 50px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.boardTitle span {
+  color: var(--secondColor);
+}
+
+.board {
+  width: 65%;
+  margin: auto;
+  height: 70%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.board .box {
+  width: 160px;
+  height: 160px;
+  box-shadow: var(--secondColor) 0px 8px 24px;
+  border: solid 1px;
+  background-color: var(--darkColor);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 0 10px 10px 0;
+  border-radius: 5px;
+  transition: transform .5s;
+}
+
+.board .box:hover {
+  transform: scale(1.04 , 1.04);
+}
+
+.board .box span {
+  font-size: 130px;
+  font-weight: bold;
+}
+
+.rightSide {
+  width: 50%;
+  border-left: solid 3px rgb(219, 220, 224);
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+}
+
+.scoreBoard {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.scoreTitle {
+  text-align: center;
+  padding: 35px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  font-size: 40px;
+}
+
+.scoreTitle span{
+  color: var(--secondColor);
+}
+
+.score {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.X_Score , .O_Score {
+  width: 120px;
+  height: 120px;
+  border: solid 1px;
+  background-color: var(--darkColor);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 35px;
+  box-shadow: var(--secondColor) 0px 8px 50px;
+}
+
+
+.X_Score h1 , .O_Score h1 {
+  text-align: center;
+  color: rgb(24, 46, 238);
+  font-weight: 900;
+}
+
+.X_Score span , .O_Score span {
+  text-align: center;
+  color: var(--secondColor);
+  font-size: 40px;
+  font-weight: 900;
+  color: #fff;
+  padding-bottom: 10px;
+}
+
+.X_Score {
+  margin-right: 20px;
+}
+
+
+.gameInfo {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.gameInfo .gameInfoTitle {
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: 1px;
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+.gameInfo .gameInfoTitle span{
+  color: rgb(14, 34, 216);
+  
+}
+
+
+.status{
+  background-color: var(--darkColor);
+  font-size: 25px;
+  padding: 5px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: var(--secondColor) 0px 8px 50px;
+  transition: all 1s;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  width: 100px;
+  margin: auto;
+  margin-bottom: 120px;
+}
+
+.reset , .again{
+  width: auto;
+  border: solid 1px;
+  border-radius: 25px;
+  padding: 5px 20px;
+  font-size: 18px;
+  margin: auto;
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 1px;
+  background-color: var(--darkColor);
+  box-shadow: rgb(7, 25, 187) 0px 8px 24px;
+  transition: all .3s;
+  text-align: center;
+}
+
+.again {
+  margin-right: 20px;
+}
+
+.reset:hover , .again:hover {
+  transform: scale(1.02 , 1.02);
+}
+
+.status {
+  width: 200px;
+  text-align: center;
+  border: solid 1px;
+  cursor: auto;
+}
+
+.status:hover {
+  transform: scale(1.02 , 1.02);
+}
+
+.restart {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-left: 25px;
+}
+
